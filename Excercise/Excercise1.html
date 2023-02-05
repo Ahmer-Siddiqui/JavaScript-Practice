@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excercise1</title>
+  </head>
+  <body>
+    <h1>Excercise1</h1>
+
+    <script>
+      // Q)Write a javascript program to generate a random number and store it in a variable.The program then takes an input from the users to tell them wether the guess was correct,greater or lesser than the original number. 100 - (no of guesses) is the score of the user .The number is guessed.Number should be between 1 - 100.
+
+      let number = Number.parseInt(Math.random() * 100 + 1);
+      let userInput;
+      let score = 100;
+      do {
+        userInput = Number.parseInt(prompt("Guess Number 1 to 100?"));
+        if (userInput != number) {
+          if(userInput > number){
+            console.log("Your number greater than real number");
+          }
+          else{
+            console.log("Your number less than real number");
+          }
+          score -= 1;
+          console.log(number);
+        } else {
+          console.log("You sucessfully done");
+          console.log("Your Score is " + score);
+        }
+        console.log(score)
+      } while (userInput != number);1
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        nav{
+            display: flex;
+            background-color: cyan;
+        }
+        nav li{
+            list-style: none;
+            padding: 0 23px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+            <li>Home</li>
+            <li>About</li>
+            <li>blog</li>
+            <li>Contact</li> 
+    </nav>
+    <div id="main">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, consequatur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, consequatur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, consequatur.</p>
+    </div>
+    <div id="li">
+        <li>Ahmer</li>
+        <li>Usama</li>
+        <li>Shahzar</li>
+        <li>Huzaifa</li>
+    </div>
+    <table id="table">
+        <tr>
+            <th>First Name</th>
+            <th>Second Name</th>
+            <th>Third Name</th>
+        </tr>
+    </table>
+    <script>
+        //Q1)Create  a navbar and change the color of its first element to red?
+
+        // let navItem = document.querySelector("nav").firstElementChild.style.color = "red" ;
+        // console.log(navItem);
+        
+        //Q2)Create a table without tbody .now use "view page source" button to check whether it has a tbody or not?
+
+        // Answer) Not
+        
+        //Q3)Create an element with 3 children now change the color of first and last element to green?
+
+        // let p1 = document.getElementById("main").firstElementChild.style.color = "Green"
+        // let p3 = document.getElementById("main").lastElementChild.style.color = "Green"
+
+        //Q4)Write a javascript code to change background of all <li> tags to cyan?
+
+            // let allList = document.getElementById("li").children
+            // console.log(Array.from(allList).forEach(element => {
+            //     element.style.backgroundColor = "cyan"
+            //     console.log(element);
+            // }))
+
+                                    // OR
+
+            // let colorAllLi = document.getElementsByTagName("li")
+            // Array.from(colorAllLi).forEach((elements) =>{
+            //     elements.style.backgroundColor = "red"
+            // })
+            // console.log(colorAllLi)
+
+        //Q5)Which of the following is used to look for the farthest ancester that matches a given CSS selector?
+        //a)matches  (b)closest (c)contains (d)none of these
+    </script>
+</body>
+</html>

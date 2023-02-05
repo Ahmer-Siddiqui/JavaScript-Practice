@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake , Water & Gun Game</title>
+  </head>
+  <body>
+    <h1>Snake , Water & Gun Game</h1>
+    <script>
+      /* Q)Use JS to create a game of snake ,water & gun.Thee game should ask you to enter S , W or G.The Computer should be able to randomly generate S ,W & G and decalre win or loss using alert. Use confirm and prompt whenever required?*/
+      let userScore = 0;
+      let computerScore = 0;
+      for (let i = 0; i < 10; i++) {
+
+          let userChoice = prompt("Enter only Snake or Water or Gun?");
+          userChoice = userChoice.toLowerCase();
+          
+          
+          let arr = ["snake", "water", "gun"];
+          let randNum = parseInt(Math.random() * 3);
+          let newRandNum = arr[randNum];
+         
+          
+          
+          
+        if (userChoice == newRandNum) {
+          alert("Draw & No point");
+        } 
+        
+        else if (userChoice == "snake" && newRandNum == "water") {
+          alert("User +1");
+          console.log("userScore : " + ++userScore);
+        }
+        
+        else if (userChoice == "water" && newRandNum == "gun") {
+            alert("user +1");
+            console.log("userScore : " + ++userScore);
+        }
+        
+        else if (userChoice == "gun" && newRandNum == "snake") {
+            alert("user +1");
+            console.log("userScore : " + ++userScore);
+        } 
+        
+        else if (newRandNum == "snake" && userChoice == "water") {
+            alert("Computer +1");
+            console.log("computerScore : " + ++computerScore);
+        } 
+        
+        else if (newRandNum == "water" && userChoice == "gun") {
+            alert("Computer +1");
+            console.log("computerScore : " + ++computerScore);
+        }
+        
+        else if (newRandNum == "gun" && userChoice == "snake") {
+            alert("Computer +1");
+            console.log("computerScore : " + ++computerScore);
+        }
+
+      };
+
+
+      if(userScore < computerScore){
+        alert("You Lose");
+      }
+      else if(userScore > computerScore){
+        alert("You Won");
+      }
+      else{
+        alert("Draw");
+      }
+    </script>
+  </body>
+</html>
